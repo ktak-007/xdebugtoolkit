@@ -13,4 +13,4 @@ class DotNodeStyler:
         r = 0.8
         g = 0.8 - float(call.sum_self_time) / (self.max_self_time) * 0.8
         b = 0.8 - float(call.call_count - 1) / float(self.max_call_count) * 0.8
-        return (255 * r, 255 * g ,255 * b)
+        return tuple(map(round, (255 * r, 255 * g, 255 * b)))
